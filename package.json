@@ -18,5 +18,10 @@
   "scripts": {
     "start": "webpack-dev-server --content-base public",
     "build": "cross-env NODE_ENV=production webpack"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "tailwindcss": "^1.1.2",
+    "uuid": "^3.3.3"
   }
 }

@@ -1,11 +1,64 @@
 <script>
-	export let name;
+	import 'tailwindcss/dist/base.min.css';
+	import 'tailwindcss/dist/components.min.css';
+	import 'tailwindcss/dist/utilities.min.css';
+	import Button from './components/Button';
+	import uuid from 'uuid/v4';
+
+	let uuidResult = uuid();
+
+	// Copies a string to the clipboard. Must be called from within an 
+	// event handler such as click. May return false if it failed, but
+	// this is not always possible. Browser support for Chrome 43+, 
+	// Firefox 42+, Safari 10+, Edge and IE 10+.
+	// IE: The clipboard feature may be disabled by an administrator. By
+	// default a prompt is shown the first time the clipboard is 
+	// used (per session).
+	// @source https://stackoverflow.com/a/33928558
+	function copyToClipboard(text) {
+		if (window.clipboardData && window.clipboardData.setData) {
+			// IE specific code path to prevent textarea being shown while dialog is visible.
+			return clipboardData.setData("Text", text); 
+
+		} else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+			var textarea = document.createElement("textarea");
+			textarea.textContent = text;
+			textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in MS Edge.
+			document.body.appendChild(textarea);
+			textarea.select();
+			try {
+				return document.execCommand("copy");  // Security exception may be thrown by some browsers.
+			} catch (ex) {
+				console.warn("Copy to clipboard failed.", ex);
+				return false;
+			} finally {
+				document.body.removeChild(textarea);
+			}
+		}
+	}
 </script>
 
-<style>
-	h1 {
-		color: purple;
-	}
-</style>
+<style></style>
 
-<h1>Hello {name}!</h1>
+<div class="container mx-auto">
+	<div class="max-w-xl mx-auto my-4">
+		<div class="font-sans text-lg text-gray-800 my-4">
+			{uuidResult}
+		</div>
+		<Button
+			onClick={() => {
+				uuidResult = uuid();
+			}}
+		>
+			Generate
+		</Button>
+		<Button
+			secondary={true}
+			onClick={() => {
+				copyToClipboard(uuidResult);
+			}}
+		>
+			Copy
+		</Button>
+	</div>
+</div>
