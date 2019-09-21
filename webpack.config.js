@@ -1,5 +1,8 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
+const packageFile = require('./package.json');
 
 const mode = process.env.NODE_ENV || 'development';
 const prod = mode === 'production';
@@ -49,7 +52,22 @@ module.exports = {
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: '[name].css'
-		})
+		}),
+
+		new HtmlWebpackPlugin({
+			template: './source/index.ejs',
+			filename: './index.html',
+			appVersion: packageFile.version,
+		}),
+
+		new CleanWebpackPlugin({
+			verbose: true,
+			dry: false,
+			cleanOnceBeforeBuildPatterns: [
+				'**/*',
+				'!.gitignore',
+			],
+		}),
 	],
 	devtool: prod ? false: 'source-map'
 };
