@@ -1,7 +1,8 @@
 <script>
 	import 'tailwindcss/dist/base.min.css';
-	import 'tailwindcss/dist/components.min.css';
+	// import 'tailwindcss/dist/components.min.css';
 	import 'tailwindcss/dist/utilities.min.css';
+
 	import Button from './components/Button';
 	import uuid from 'uuid/v4';
 
