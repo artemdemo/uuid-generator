@@ -47,6 +47,7 @@
 			{uuidResult}
 		</div>
 		<Button
+			secondary={true}
 			onClick={() => {
 				uuidResult = uuid();
 			}}
@@ -60,6 +61,14 @@
 			}}
 		>
 			Copy
+		</Button>
+		<Button
+			onClick={() => {
+				uuidResult = uuid();
+				copyToClipboard(uuidResult);
+			}}
+		>
+			Generate & Copy
 		</Button>
 	</div>
 	<div class="max-w-xl mx-auto my-4 text-gray-800">
