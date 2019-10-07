@@ -41,7 +41,7 @@
 
 <style></style>
 
-<div class="container mx-auto">
+<div class="container mx-auto px-4">
 	<div class="max-w-xl mx-auto my-4">
 		<div class="font-sans text-lg text-gray-800 my-4">
 			{uuidResult}
