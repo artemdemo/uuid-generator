@@ -1,15 +1,18 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const packageFile = require('./package.json');
 
 const mode = process.env.NODE_ENV || 'development';
 const prod = mode === 'production';
 
+const SOURCE = './source';
+
 module.exports = {
 	entry: {
-		bundle: ['./source/index.js']
+		bundle: [`${SOURCE}/index.js`]
 	},
 	resolve: {
 		alias: {
@@ -55,7 +58,7 @@ module.exports = {
 		}),
 
 		new HtmlWebpackPlugin({
-			template: './source/index.ejs',
+			template: `${SOURCE}/index.ejs`,
 			filename: './index.html',
 			appVersion: packageFile.version,
 		}),
@@ -68,6 +71,10 @@ module.exports = {
 				'!.gitignore',
 			],
 		}),
+
+		new CopyPlugin([
+			`${SOURCE}/manifest.json`,
+		]),
 	],
 	devtool: prod ? false: 'source-map'
 };
