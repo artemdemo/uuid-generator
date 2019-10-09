@@ -2,8 +2,17 @@
     export let href = '';
 </script>
 
+<style>
+    .link {
+        /* text-blue-500 */
+        color: #4299e1;
+        /* underline */
+        text-decoration: underline;
+    }
+</style>
+
 <a
-    class="text-blue-500 underline"
+    class="link"
     href={href}
 >
     <slot></slot>

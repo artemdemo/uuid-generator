@@ -22,6 +22,8 @@
         <UuidContainer>
             {uuidResult}
         </UuidContainer>
+    </Section>
+    <Section>
         <Button
             onClick={() => {
                 uuidResult = uuid();
