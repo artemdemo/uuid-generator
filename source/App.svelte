@@ -1,12 +1,12 @@
 <script>
     import 'tailwindcss/dist/base.min.css';
-    // import 'tailwindcss/dist/components.min.css';
     import 'tailwindcss/dist/utilities.min.css';
 
     import Button from './components/Button';
     import { buttonAppearance } from './components/ButtonProps';
     import AppDescription from './components/AppDescription';
     import UuidContainer from './components/UuidContainer';
+    import Section from './components/Section';
     import { copyToClipboard } from './services/copy';
     import uuid from 'uuid/v4';
 
@@ -16,8 +16,8 @@
 
 <style></style>
 
-<div class="container mx-auto px-4">
-    <div class="max-w-xl mx-auto my-4">
+<div class="container max-w-xl mx-auto px-4 text-gray-800">
+    <Section>
         <UuidContainer>
             {uuidResult}
         </UuidContainer>
@@ -29,6 +29,6 @@
         >
             Generate & Copy
         </Button>
-    </div>
+    </Section>
     <AppDescription />
 </div>
