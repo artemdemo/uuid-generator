@@ -1,7 +1,7 @@
 <script>
     // import 'tailwindcss/dist/base.min.css';
     // import 'tailwindcss/dist/utilities.min.css';
-    import './base-style.css';
+    import './styles/normalization.css';
 
     import Button from './components/Button';
     import { buttonAppearance } from './components/ButtonProps';
