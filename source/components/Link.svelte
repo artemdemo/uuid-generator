@@ -14,6 +14,7 @@
 <a
     class="link"
     href={href}
+    target="_blank"
 >
     <slot></slot>
 </a>
