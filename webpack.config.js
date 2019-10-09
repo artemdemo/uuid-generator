@@ -3,12 +3,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const path = require('path');
+
+const SOURCE = './source';
+
 const packageFile = require('./package.json');
+const manifestFile = require(`${SOURCE}/manifest.json`);
 
 const mode = process.env.NODE_ENV || 'development';
 const prod = mode === 'production';
-
-const SOURCE = './source';
 
 module.exports = {
 	entry: {
@@ -62,6 +64,7 @@ module.exports = {
 			template: `${SOURCE}/index.ejs`,
 			filename: './index.html',
 			appVersion: packageFile.version,
+			themeColor: manifestFile.theme_color,
 		}),
 
 		new CleanWebpackPlugin({
