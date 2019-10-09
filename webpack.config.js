@@ -12,7 +12,8 @@ const SOURCE = './source';
 
 module.exports = {
 	entry: {
-		bundle: [`${SOURCE}/index.js`]
+		bundle: [`${SOURCE}/index.js`],
+		sw: [`${SOURCE}/sw.js`],
 	},
 	resolve: {
 		alias: {
