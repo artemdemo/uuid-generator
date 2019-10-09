@@ -1,6 +1,7 @@
 <script>
     import Title from './Title';
     import Section from './Section';
+    import Link from './Link';
 </script>
 
 <div>
@@ -13,12 +14,9 @@
         A universally unique identifier (UUID) is a 128-bit number used to identify information in computer systems.
         <br />
         Source: 
-        <a
-            class="text-blue-500 underline"
-            href="https://en.wikipedia.org/wiki/Universally_unique_identifier"
-        >
+        <Link href="https://en.wikipedia.org/wiki/Universally_unique_identifier">
             [wiki] Universally unique identifier
-        </a>
+        </Link>
     </Section>
     <Section>
         <Title>Disclamer</Title>

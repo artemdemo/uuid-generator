@@ -7,6 +7,7 @@
     import AppDescription from './components/AppDescription';
     import UuidContainer from './components/UuidContainer';
     import Section from './components/Section';
+    import Container from './components/Container';
     import { copyToClipboard } from './services/copy';
     import uuid from 'uuid/v4';
 
@@ -16,7 +17,7 @@
 
 <style></style>
 
-<div class="container max-w-xl mx-auto px-4 text-gray-800">
+<Container>
     <Section>
         <UuidContainer>
             {uuidResult}
@@ -31,4 +32,4 @@
         </Button>
     </Section>
     <AppDescription />
-</div>
+</Container>
