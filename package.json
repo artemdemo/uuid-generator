@@ -1,6 +1,6 @@
 {
   "name": "uuid-generator",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server --content-base public",
     "build": "cross-env NODE_ENV=production webpack"
@@ -20,7 +20,6 @@
     "webpack-dev-server": "^3.8.2"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
     "tailwindcss": "^1.1.2",
     "uuid": "^3.3.3"
   }

@@ -1,5 +1,5 @@
 <script>
-    import classnames from 'classnames';
+    import classnames from '../services/classnames';
     import { buttonAppearance } from './ButtonProps';
 
     export let appearance = buttonAppearance.PRIMARY;
