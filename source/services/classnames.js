@@ -17,7 +17,7 @@ const classnames = (...args) => {
 
     args.forEach(item => result.push(processClass(item)));
 
-    return result;
+    return result.join(' ');
 };
 
 export default classnames;

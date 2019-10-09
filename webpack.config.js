@@ -44,11 +44,12 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    /**
-                     * MiniCssExtractPlugin doesn't support HMR.
-                     * For developing, use 'style-loader' instead.
-                     * */
-                    prod ? MiniCssExtractPlugin.loader : 'style-loader',
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            hmr: prod,
+                        },
+                    },
                     'css-loader'
                 ]
             }
