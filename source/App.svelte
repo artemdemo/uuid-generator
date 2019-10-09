@@ -1,6 +1,7 @@
 <script>
-    import 'tailwindcss/dist/base.min.css';
-    import 'tailwindcss/dist/utilities.min.css';
+    // import 'tailwindcss/dist/base.min.css';
+    // import 'tailwindcss/dist/utilities.min.css';
+    import './base-style.css';
 
     import Button from './components/Button';
     import { buttonAppearance } from './components/ButtonProps';
@@ -14,8 +15,6 @@
     let uuidResult = uuid();
 
 </script>
-
-<style></style>
 
 <Container>
     <Section>
