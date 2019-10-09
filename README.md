@@ -8,6 +8,6 @@ App is available here: https://artemdemo.github.io/uuid-generator/public/
 * [svelte.js](https://svelte.dev/)
 * [uuid](https://www.npmjs.com/package/uuid)
 
-## Source links
+## Links
 
 * https://medium.com/dev-channel/learn-how-to-build-a-pwa-in-under-5-minutes-c860ad406ed
