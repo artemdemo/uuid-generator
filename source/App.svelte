@@ -9,7 +9,7 @@
     import Section from './components/Section';
     import Container from './components/Container';
     import { copyToClipboard } from './services/copy';
-    import uuid from 'uuid/v4';
+    import { v4 as uuidv4 } from 'uuid';
 
     let uuidResult = uuid();
 
@@ -60,7 +60,7 @@
     <Section>
         <Button
             onClick={() => {
-                uuidResult = uuid();
+                uuidResult = uuidv4();
                 copyToClipboard(uuidResult);
             }}
         >
