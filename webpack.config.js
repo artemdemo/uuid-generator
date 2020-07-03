@@ -77,10 +77,12 @@ module.exports = {
             ],
         }),
 
-        new CopyPlugin([
-            `${SOURCE}/manifest.json`,
-            {from: `${SOURCE}/icons`, to: `icons`},
-        ]),
+        new CopyPlugin({
+            patterns: [
+                `${SOURCE}/manifest.json`,
+                {from: `${SOURCE}/icons`, to: `icons`},
+            ],
+        }),
     ],
     devtool: prod ? false: 'source-map'
 };

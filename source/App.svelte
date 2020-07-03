@@ -11,7 +11,7 @@
     import { copyToClipboard } from './services/copy';
     import { v4 as uuidv4 } from 'uuid';
 
-    let uuidResult = uuid();
+    let uuidResult = uuidv4();
 
 </script>
 
