@@ -6,8 +6,9 @@
 
 <div>
     <Section>
-        Blazing fast UUID generator app. Optimized for fast loading and serving UUID.
-        Will not reload the whole page to create a new id. Everything will happen in the browser.
+        The Blazing fast UUID generator app is optimized for fast loading and serving UUIDs.
+        Unlike other UUID generators, it does not need to reload the entire page to create a new ID.
+        All generation is done in the browser for the quickest and most efficient experience.
     </Section>
     <Section>
         <Title>What is UUID</Title>
